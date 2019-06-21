@@ -29,6 +29,28 @@ p {
     width: calc(50% - 30px);
     margin: 15px;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.list__item.on_sale:before {
+    content: 'Sale';
+    position: absolute;
+    top: -60px;
+    left: -60px;
+    z-index: 3;
+    background-color: #fff;
+    width: 90px;
+    height: 90px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    color: #222;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-right: 30px;
+    padding-bottom: 30px;
 }
 
 .list__item_image {
