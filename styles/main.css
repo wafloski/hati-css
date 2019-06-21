@@ -1,0 +1,73 @@
+@import "normalize.css";
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400&display=swap');
+
+html {
+    font-size: 16px;
+    font-family: Lato, sans-serif;
+}
+
+.page-title {
+    text-align: center;
+    font-weight: 300;
+    color: #222;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.list__item {
+    width: calc(25% - 30px);
+    margin: 15px;
+    cursor: pointer;
+}
+
+.list__item_image {
+    position: relative;
+}
+
+.list__item_image:after {
+    content: '';
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    transition: .25s;
+}
+
+.list__item:hover .list__item_image:after {
+    display: block;
+}
+
+.list__item_image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.list__item_details {
+    display: flex;
+}
+
+.list__item_name {
+    width: 66.6666%;
+}
+
+.list__item_price {
+    width: 33.3333%;
+    text-align: right;
+    color: #222;
+    line-height: 1.5;
+}
+
+.list__item_price--first {
+    color: #808080;
+    display: block;
+    text-decoration: line-through;
+}
